@@ -1,0 +1,35 @@
+| LEVEL     | FLAG                                | TIPS                                                                                                                                                  |
+|-----------|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Level 0   | ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If    |                                                                                                                                                       |
+| Level 1   | 263JGJPfgU6LtdEvgfWU1XP5yac29mFx    | Lire un fichier sans interpreteur => ajouter le chemin relatif (ex: - devient ./-). commande more qui permet de lire un fichier ligne par ligne ou less|
+| Level 2   | MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx    | \ pour pas interpreter                                                                                                                                |
+| Level 3   | 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ    | .files fichiers secrets                                                                                                                               |
+| Level 4   | 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw    |                                                                                                                                                       |
+| Level 5   | HWasnPhtq9AVKe0dmk45nxy20cvUa6EG    | find ! -executable -size 1033c. find prend des negatifs et dois specifier ses unitee de taille                                                        |
+| Level 6   | morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj    | find -group bandit6 -user bandit7 -size 33c                                                                                                           |
+| Level 7   | dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc    |                                                                                                                                                       |
+| Level 8   | 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM    | sort data.txt \| uniq -u                                                                                                                              |
+| Level 9   | FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey    | strings data.txt \| grep ===                                                                                                                          |
+| Level 10  | dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr    | base64 -d data.txt                                                                                                                                    |
+| Level 11  | 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4    | tr 'A-Za-z' 'N-ZA-Mn-za-m' is a ROT13 algo                                                                                                            |
+| Level 12  | FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn    | traduire le fichier texte en binaire puis Lire la trace de compression, premier bytes du fichier.                                                     |
+| Level 13  | MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS    | ssh -i sshkey.private bandit14@localhost -p 2220                                                                                                      |
+| Level 14  | 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo    | Envoi basique avec telnet                                                                                                                             |
+| Level 15  | kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx    | openssl s_client -connect localhost:30001                                                                                                             |
+| Level 16  | EReVavePLFHtFlFsjn3hyzMlvSuSAcRD    | openssl s_client -quiet -connect localhost:31790, scan des ports avec netstat, besoin du -quiet pour le k du mdp                                      |
+| Level 17  | x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO    |                                                                                                                                                       |
+| Level 18  | cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8    | ssh bandit18@bandit.labs.overthewire.org -p 2220 'cat readme'                                                                                         |
+| Level 19  | 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO    | ./bandit20-do cat /etc/bandit_pass/bandit20                                                                                                           |
+| Level 20  | EeoULMCra2q0dSkYj561DX7s1CpBuOBt    | echo -n '0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO' \| nc -l -p 1234 &                                                                                        |
+| Level 21  | tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q    | cat sur le fichier tmp creer par cron                                                                                                                 |
+| Level 22  | 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga    | "echo I am user bandit23 \| md5sum \| cut -d ' ' -f 1 ; cat /tmp/8ca319486bfbbc3663ea0fbe81326349"                                                   |
+| Level 23  | gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8    | Bien faire attention aux autorisation, il faut permettre a bandit24 d'executer notre script mais aussi d'ecrire dans le fichier d'output!             |
+| Level 24  | iCi86ttT4KSNe1armKiwbQNmB3YJP3q4    | for i in \$(seq 0 9999); do echo gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 \"\$i\" ; done \| nc localhost 30002                                               |
+| Level 25  | s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ    | J'ai du aller voir la soluce => moyen d'ouvrir vim depuis un more non fini en appuyant sur v, depuis ce vim on peut appeler un shell(:shell), celui-ci nous renvoie a nouveau dans more donc on doit redefinir la variable shell depuis vim (:set shell=/bin/bash)       |
+| Level 26  | upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB    | ./bandit27-do cat /etc/bandit_pass/bandit27                                                                                                           |
+| Level 27  | Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN    | git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo                                                                                    |
+| Level 28  | 4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7    | git restore                                                                                                                                           |
+| Level 29  | qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL    | git log --oneline --graph --all ; git diff master remotes/origin/dev                                                                                   |
+| Level 30  | fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy    | git tag ; git show secret                                                                                                                             |
+| Level 31  | 3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K    | simple git push                                                                                                                                       |
+| Level 32  | tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0    | \$0 
